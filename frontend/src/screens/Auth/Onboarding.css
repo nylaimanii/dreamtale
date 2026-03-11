@@ -1,0 +1,90 @@
+.onboarding-screen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 24px;
+}
+
+.onboarding-content {
+  width: 100%;
+  max-width: 420px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 24px;
+}
+
+.sparky-onboard { font-size: 72px; }
+
+.step-card {
+  width: 100%;
+  text-align: center;
+  padding: 36px 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+
+.step-emoji { font-size: 56px; }
+
+.step-card h2 { font-size: 32px; }
+.step-card p { color: var(--text-light); font-size: 16px; }
+
+.onboard-input {
+  width: 100%;
+  background: rgba(255,255,255,0.1);
+  border: 2px solid var(--purple-bright);
+  border-radius: 16px;
+  padding: 16px 18px;
+  color: white;
+  font-size: 18px;
+  font-weight: 700;
+  text-align: center;
+}
+.onboard-input:focus { outline: none; border-color: var(--yellow); }
+
+.age-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 12px;
+  width: 100%;
+}
+
+.age-btn {
+  padding: 16px;
+  border-radius: 16px;
+  font-size: 24px;
+  font-weight: 900;
+  background: rgba(255,255,255,0.1);
+  color: white;
+  border: 2px solid transparent;
+  transition: all 0.2s;
+}
+
+.age-btn:hover { border-color: var(--purple-bright); background: rgba(124,58,237,0.2); }
+.age-btn.selected {
+  background: linear-gradient(135deg, var(--purple-bright), var(--pink));
+  border-color: transparent;
+  transform: scale(1.1);
+}
+
+.welcome-content { display: flex; flex-direction: column; gap: 12px; align-items: center; }
+.stars-row { font-size: 28px; letter-spacing: 4px; }
+.welcome-msg { font-size: 18px; font-weight: 700; color: var(--yellow); line-height: 1.5; }
+
+.step-actions { width: 100%; margin-top: 8px; }
+.step-actions button { width: 100%; font-size: 18px; padding: 16px; }
+
+.step-dots {
+  display: flex;
+  gap: 10px;
+}
+.dot {
+  width: 10px; height: 10px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  transition: all 0.3s;
+}
+.dot.active { background: var(--yellow); width: 28px; border-radius: 5px; }
+.dot.done { background: var(--green); }

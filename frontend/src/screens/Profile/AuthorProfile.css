@@ -1,0 +1,123 @@
+.profile-screen { padding-bottom: 80px; }
+
+.profile-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Author card */
+.author-card {
+  text-align: center;
+  padding: 32px 24px;
+  background: linear-gradient(135deg, rgba(124,58,237,0.4), rgba(236,72,153,0.3));
+  border: 2px solid rgba(124,58,237,0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+.author-avatar {
+  width: 96px; height: 96px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--yellow), var(--orange));
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 0 30px rgba(252,211,77,0.5);
+}
+.avatar-inner {
+  font-family: 'Fredoka One', cursive;
+  font-size: 48px;
+  color: var(--purple-dark);
+}
+
+.author-name { font-size: 36px; }
+.author-title { font-size: 15px; color: var(--yellow); font-weight: 800; }
+.author-credit { font-size: 12px; color: var(--text-light); font-style: italic; }
+
+.author-stats { display: flex; gap: 0; width: 100%; margin-top: 8px; }
+.author-stat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 12px 8px;
+  border-right: 1px solid rgba(255,255,255,0.1);
+}
+.author-stat:last-child { border-right: none; }
+.astat-val { font-family: 'Fredoka One', cursive; font-size: 28px; color: var(--yellow); }
+.astat-label { font-size: 11px; color: var(--text-light); font-weight: 700; text-align: center; }
+
+/* Badges */
+.badges-section { display: flex; flex-direction: column; gap: 12px; }
+.badges-section h2 { font-size: 22px; }
+
+.badges-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+.badge-item {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 14px 10px;
+  text-align: center;
+  border: 2px solid transparent;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  align-items: center;
+  transition: all 0.2s;
+}
+.badge-item.earned {
+  border-color: var(--yellow);
+  background: rgba(252,211,77,0.1);
+}
+.badge-item.locked { opacity: 0.4; }
+
+.badge-icon { font-size: 28px; }
+.badge-name { font-size: 12px; font-weight: 800; line-height: 1.2; }
+.badge-desc { font-size: 10px; color: var(--text-light); font-weight: 600; line-height: 1.3; }
+
+/* Year review */
+.year-review h2 { font-size: 20px; margin-bottom: 16px; }
+.year-stats { display: flex; justify-content: space-around; }
+.yst {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+.yst-emoji { font-size: 28px; }
+.yst-num { font-family: 'Fredoka One', cursive; font-size: 32px; color: var(--yellow); }
+.yst-label { font-size: 12px; color: var(--text-light); font-weight: 700; text-align: center; }
+
+/* Actions */
+.profile-actions { display: flex; flex-direction: column; gap: 10px; }
+.profile-action-btn {
+  width: 100%;
+  background: rgba(255,255,255,0.08);
+  border: 2px solid rgba(255,255,255,0.15);
+  color: white;
+  border-radius: 16px;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 800;
+  text-align: center;
+  transition: all 0.2s;
+}
+.profile-action-btn:hover { border-color: var(--purple-bright); background: rgba(124,58,237,0.2); }
+.logout-btn {
+  background: none;
+  color: rgba(255,255,255,0.4);
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px;
+  border-radius: 12px;
+  text-align: center;
+}
+.logout-btn:hover { color: var(--pink); }

@@ -1,0 +1,155 @@
+.create-screen { padding-bottom: 20px; }
+
+.create-content {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.create-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.create-header h1 { font-size: 24px; }
+
+/* Method choose */
+.method-choose {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+  padding: 20px 0;
+}
+.method-sparky { font-size: 64px; }
+.method-choose h2 { font-size: 24px; text-align: center; }
+
+.method-card {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: var(--card-bg);
+  border: 2px solid rgba(255,255,255,0.1);
+  border-radius: 20px;
+  padding: 20px;
+  text-align: left;
+  color: white;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+.method-card:hover { border-color: var(--purple-bright); transform: translateY(-2px); }
+.method-icon { font-size: 40px; flex-shrink: 0; }
+.method-title { font-family: 'Fredoka One', cursive; font-size: 20px; margin-bottom: 4px; }
+.method-sub { font-size: 13px; color: var(--text-light); font-weight: 600; }
+
+/* Forms */
+.describe-form, .draw-form {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  align-items: center;
+}
+.form-sparky { font-size: 56px; }
+.describe-form h2, .draw-form h2 { font-size: 26px; text-align: center; }
+.form-hint { font-size: 14px; color: var(--text-light); text-align: center; line-height: 1.5; font-weight: 600; }
+
+.describe-input {
+  width: 100%;
+  background: rgba(255,255,255,0.08);
+  border: 2px solid rgba(255,255,255,0.2);
+  border-radius: 20px;
+  padding: 16px 18px;
+  color: white;
+  font-size: 15px;
+  line-height: 1.6;
+  resize: none;
+  transition: border-color 0.2s;
+}
+.describe-input:focus { outline: none; border-color: var(--purple-bright); }
+.describe-input::placeholder { color: rgba(255,255,255,0.35); }
+
+.upload-zone {
+  width: 100%;
+  min-height: 200px;
+  border: 3px dashed rgba(255,255,255,0.3);
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  cursor: pointer;
+  transition: all 0.2s;
+  background: rgba(255,255,255,0.05);
+  overflow: hidden;
+}
+.upload-zone:hover { border-color: var(--purple-bright); background: rgba(124,58,237,0.1); }
+.upload-zone.has-image { border: 2px solid var(--purple-bright); }
+.upload-icon { font-size: 48px; }
+.upload-zone p { font-size: 16px; font-weight: 700; color: var(--text-light); }
+.drawing-preview { width: 100%; height: 100%; object-fit: contain; max-height: 280px; }
+
+.form-actions { width: 100%; display: flex; flex-direction: column; gap: 10px; }
+.form-actions button { width: 100%; padding: 16px; font-size: 17px; }
+
+.back-to-choose { background: none; color: var(--text-light); font-size: 14px; font-weight: 700; padding: 10px; }
+
+.creating-loading { display: flex; flex-direction: column; align-items: center; gap: 12px; color: var(--text-light); font-size: 14px; font-weight: 700; }
+
+/* Preview */
+.char-preview {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.char-portrait {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  margin: 0 auto;
+  overflow: hidden;
+  border: 4px solid var(--purple-bright);
+  box-shadow: 0 0 30px rgba(124,58,237,0.5);
+  background: linear-gradient(135deg, var(--purple-light), var(--pink));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.char-portrait img { width: 100%; height: 100%; object-fit: cover; }
+.drawing-as-portrait { object-fit: contain; background: white; }
+.char-portrait-placeholder { font-size: 72px; }
+
+.char-info { display: flex; flex-direction: column; gap: 12px; }
+.char-name { font-size: 32px; text-align: center; }
+.char-species { text-align: center; color: var(--text-light); font-size: 14px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; }
+
+.char-traits { display: flex; flex-direction: column; gap: 10px; }
+.trait {
+  display: flex;
+  gap: 12px;
+  align-items: flex-start;
+  background: rgba(255,255,255,0.05);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+.trait-icon { font-size: 20px; flex-shrink: 0; margin-top: 2px; }
+.trait-label { font-size: 11px; text-transform: uppercase; letter-spacing: 1px; color: var(--text-light); font-weight: 700; margin-bottom: 2px; }
+.trait-val { font-size: 14px; font-weight: 700; line-height: 1.4; }
+
+.drawing-praise {
+  background: rgba(252,211,77,0.1);
+  border: 1px solid rgba(252,211,77,0.3);
+  border-radius: 12px;
+  padding: 12px;
+  font-size: 13px;
+  line-height: 1.5;
+  color: var(--text-light);
+}
+
+.preview-actions { display: flex; flex-direction: column; gap: 10px; }
+.preview-actions button { padding: 16px; font-size: 17px; }
