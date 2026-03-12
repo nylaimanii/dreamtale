@@ -105,13 +105,15 @@ export default function StoryReader() {
 
   function buildWordTimings(text, audioDuration) {
     const words = text.split(/\s+/).filter(Boolean);
-    const avgTime = audioDuration / words.length;
+    // Assign relative weights (punctuated words get slightly more time)
+    const weights = words.map(w => /[.,!?;:]$/.test(w) ? 1.3 : 1.0);
+    const totalWeight = weights.reduce((a, b) => a + b, 0);
     let t = 0;
     return words.map((word, i) => {
       const start = t;
-      // Slightly longer for punctuated words
-      const mult = /[.,!?;:]$/.test(word) ? 1.3 : 1.0;
-      t += avgTime * mult;
+      // Scale each word's duration proportionally so total == audioDuration exactly
+      const duration = (weights[i] / totalWeight) * audioDuration;
+      t += duration;
       return { word, start, end: t, idx: i };
     });
   }
