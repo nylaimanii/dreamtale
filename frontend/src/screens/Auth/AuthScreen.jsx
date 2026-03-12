@@ -87,9 +87,6 @@ export default function AuthScreen() {
             <button className="btn-primary auth-btn" onClick={handleGoogle} disabled={loading}>
               <span>🔵</span> Continue with Google
             </button>
-            <button className="auth-btn auth-btn-apple" onClick={handleApple} disabled={loading}>
-              <span>🍎</span> Continue with Apple
-            </button>
             <div className="auth-divider"><span>or</span></div>
             <button className="btn-yellow auth-btn" onClick={() => setMode('signup')}>
               ✨ Create New Account
